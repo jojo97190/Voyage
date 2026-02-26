@@ -1,0 +1,55 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+    <!-- https://coolors.co/palette/ff9f1c-ffbf69-ffffff-cbf3f0-2ec4b6 couleur du site  -->
+    <nav>
+    <ul> <!--Logo menant à la page d'accueil-->
+        <li><a href="index.php"><img src="logo.png" alt="Logo" class="nav-logo" ></a></li>
+        <li><a href="index.php">Accueil</a></li>
+        <li><a href="voyage.php">Nos Voyages</a></li>
+        <li><a href="Reservation.html">Réservation</a></li>
+        <li><a href="contact.html">Contactez-nous</a></li>
+    </ul>    
+    </nav>
+    <div class="container">
+        <header><h2>Réservation</h2></header>
+        
+        <form action="reservation.php" method="post" id="formulaire">
+
+        <!-- champs de saisie -->
+        <input type="text" name="nom" placeholder="Votre nom" required pattern="^[^\d@]*$"><!--pattern pour ne pas accepter les chiffres ni de @*/-->
+        <input type="text" name="prenom" placeholder="Votre prénom" required pattern="^[^\d@]*$" ><!--pattern pour ne pas accepter les chiffres ni de @*/-->
+        <input type="email" name="email" placeholder="Votre mail" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required > <!--pattern pour vérifier le format de l'email et que il y est 2 caractère après le point -->
+        <select name="destination" id="destination_choisie">
+            <option value="">--Choisissez votre destination--</option>
+            <option value="1">Paris</option>
+            <option value="2">New York</option>
+            <option value="3">Tokyo</option>
+            <option value="4">Londres</option>
+            <option value="5">Sydney</option>
+            <option value="6">Rome</option>
+            <option value="7">Barcelone</option>
+            <option value="8">Berlin</option>
+            <option value="9">Moscou</option>
+            <option value="10">Pékin</option>
+            <option value="11">Rio de Janeiro</option>
+            <option value="12">Le Caire</option>
+            <option value="13">Bangkok</option>
+            <option value="14">Istanbul</option>
+            <option value="15">Los Angeles</option>
+
+          </select>
+          <label>Date de départ</label>
+        <input type="date" name="date" placeholder="Date de départ" required>
+        <label>Date de retour</label>
+        <input type="date" name="date-retour" placeholder="Date de retour" required>
+        <!-- bouton d'envoi -->
+        <button type="submit" form="formulaire">Je réserve</button>
+    </form>
+</div>
+    
+</body>

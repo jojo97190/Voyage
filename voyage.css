@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Conteneur des blocs de destination */
+.container-destination {
+    display: flex; /* Permet d'aligner les blocs côte à côte */
+    flex-wrap: wrap; /* Permet de passer à la ligne si l'espace est insuffisant */
+    gap: 15px; /* Ajoute un espace entre les blocs */
+}
+
+
+
+/* Block pour destination */
+.block-destination {
+    box-shadow: 0 0 10px #2EC4B6; /* Ombre autour du bloc */
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+    width: 300px; /* Largeur fixe pour chaque bloc */
+    background-color: #CBF3F0; /* Couleur de fond pour chaque bloc */
+}
+
+/* navbar */
+nav {
+    background-color: #FF9F1C;
+    color: white;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px; /* Ajout des bordures arrondies */
+    position: fixed; /* Fixe la barre de navigation en haut */
+    width: 100%; /* Prend toute la largeur de l'écran */
+    top: 0; /* Positionne la barre de navigation en haut de la page */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-logo {
+    height: 150px; /* Ajustez la hauteur selon vos besoins */
+    border-radius: 10px; /* Ajout des bordures arrondies */
+}
+
+li {
+    float: left;
+    display: inline;
+}
+
+li a:hover {
+    background-color:#FFBF69;
+    border-radius: 10px; /* Ajout des bordures arrondies */
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px; /* Espace au-dessus du formulaire */
+}
+
+.toggle-header, .bloc {
+    cursor: pointer;
+}
+
+.toggle-header:hover {
+    width: max-content;  
+}
+
+.toggle-content {
+    display: none; /* Masquer le contenu par défaut */
+
+}
+
+.entete{
+    height: 50px;
+    background-color: #FF9F1C;
+    border-bottom: 1px solid #ddd;
+    color: white;
+}
+
+.tableau{
+    height: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+}

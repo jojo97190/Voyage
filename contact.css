@@ -1,0 +1,84 @@
+body {
+    
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 8px;
+
+}
+/* formulaire */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    background: #FFBF69;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 11.5%; /* Ajout d'une marge supérieure pour éviter que le formulaire soit sous la nav */
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+header{
+    border-radius: 10px; /* Ajout des bordures arrondies */
+    background-color: black;
+    color: white;
+}
+/* navbar */
+nav {
+    background-color: #FF9F1C;
+    color: white;
+    
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px; /* Ajout des bordures arrondies */
+    position: fixed; /* Fixe la barre de navigation en haut */
+    width: 100%; /* Prend toute la largeur de l'écran */
+    top: 0; /* Positionne la barre de navigation en haut de la page */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-logo {
+    height: 150px; /* Ajustez la hauteur selon vos besoins */
+    border-radius: 10px; /* Ajout des bordures arrondies */
+}
+
+li {
+    float: left;
+    display: inline;
+}
+
+li a:hover {
+    background-color:#FFBF69;
+    border-radius: 10px; /* Ajout des bordures arrondies */
+}

@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.titre2{
+    text-align: center;
+    font-size: 3.5em;
+    margin-top: 20px;
+    color: 2EC4B6;
+    font-weight: bold;
+}
+.paragraphe{
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: black;
+    font-weight: bold;
+}
+
+/* navbar */
+nav {
+    background-color: #FF9F1C;
+    color: white;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px; /* Ajout des bordures arrondies */
+    position: sticky; /* Fixe la barre de navigation en haut */
+    width: 100%; /* Prend toute la largeur de l'écran */
+    top: 0; /* Positionne la barre de navigation en haut de la page */
+    z-index: 10; /* Assure que la barre de navigation est au-dessus */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-logo {
+    height: 150px; /* Ajustez la hauteur selon vos besoins */
+    border-radius: 10px; /* Ajout des bordures arrondies */
+}
+
+li {
+    float: left;
+    display: inline;
+}
+
+li a:hover {
+    background-color:#FFBF69;
+    border-radius: 10px; /* Ajout des bordures arrondies */
+}
+
+.carousel {
+    height: 500px;
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px; /* Espace pour la barre de navigation */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1; /* Assure que le carrousel passe derrière */
+}
+
+.img-caroussel{
+    height: 500px;
+    width: 850px;        
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse son conteneur sans déformation */
+    image-rendering: auto; /* Améliore le rendu des images */
+    -webkit-filter: brightness(1.1); /* Optionnel : améliore légèrement la luminosité */
+    filter: brightness(1.1); /* Optionnel : améliore légèrement la luminosité */
+}
+
+
+/* Images container */
+.carousel-images {
+    display: flex;
+    width: calc(100% * 6); /* 6 images */
+    animation: slide 30s linear infinite alternate;
+}
+
+.carousel-images img {
+    width: 100%;
+}
+
+/* Keyframes pour l'animation avec pauses */
+@keyframes slide {
+    0%{ transform: translate(0%); }
+    100%{ transform: translate(-83.3%); }
+}
+.titre{
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #FF9F1C;
+    font-weight: bold;
+}
+
+/* avis */
+table {
+    border-collapse: collapse;
+    
+    border: 2px solid rgb(140 140 140);
+    font-family: sans-serif;
+    font-size:1.5em;
+    letter-spacing: 1px; 
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px; /* Ajout des bordures arrondies */
+    overflow: hidden; /* Pour cacher les coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour le tableau */
+  }
+  th {
+    background-color:2EC4B6;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    
+  }
+  td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+    text-align: center;
+   
+  }
+  
+
+
+  
