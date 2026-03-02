@@ -1,51 +1,31 @@
-body {
-    
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 8px;
+﻿*, *::before, *::after {
+    box-sizing: border-box;
+}
 
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
-/* formulaire */
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    background: #FFBF69;
-    padding: 20px;
-    width: 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 11.5%; /* Ajout d'une marge supérieure pour éviter que le formulaire soit sous la nav */
-}
-form {
+
+body {
+    min-height: 100vh;
+    padding-top: 80px;
+    background-color: #CBF3F0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
-div {
-    display: block;
-    unicode-bidi: isolate;
-}
-header{
-    border-radius: 10px; /* Ajout des bordures arrondies */
-    background-color: black;
-    color: white;
-}
-/* navbar */
+
+/* ===== NAV ===== */
 nav {
     background-color: #FF9F1C;
     color: white;
-    
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 5px; /* Ajout des bordures arrondies */
-    position: fixed; /* Fixe la barre de navigation en haut */
-    width: 100%; /* Prend toute la largeur de l'écran */
-    top: 0; /* Positionne la barre de navigation en haut de la page */
+    padding: 8px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 nav ul {
@@ -54,31 +34,142 @@ nav ul {
     padding: 0;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
 }
 
 nav ul li {
-    margin-right: 20px;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li a {
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.1em;
     color: white;
-    padding: 10px 15px;
+    padding: 8px 12px;
     display: block;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    background-color: #FFBF69;
+    border-radius: 8px;
 }
 
 .nav-logo {
-    height: 150px; /* Ajustez la hauteur selon vos besoins */
-    border-radius: 10px; /* Ajout des bordures arrondies */
+    height: 60px;
+    border-radius: 8px;
+    display: block;
 }
 
-li {
-    float: left;
-    display: inline;
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 15px 40px;
 }
 
-li a:hover {
-    background-color:#FFBF69;
-    border-radius: 10px; /* Ajout des bordures arrondies */
+/* ===== CONTAINER FORMULAIRE ===== */
+.container {
+    background: #FFBF69;
+    padding: 25px 30px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 18px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+/* ===== FORMULAIRE ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #FF9F1C;
+    box-shadow: 0 0 0 2px rgba(255, 159, 28, 0.3);
+}
+
+button[type="submit"] {
+    padding: 12px;
+    background-color: #FF9F1C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #e08800;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+    body {
+        padding-top: 100px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .nav-logo {
+        height: 45px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+        padding: 6px 8px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    nav ul li a {
+        font-size: 0.8em;
+        padding: 5px 6px;
+    }
 }

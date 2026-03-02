@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0">
     <title>Nos Voyages</title>
     <link rel="stylesheet" href="voyage.css">
 </head>
@@ -21,19 +21,19 @@
 
     <form action="voyage.php" method="post">
         <label>
-            filtrer par prix : <input type="text" name="filtrerP">
+            filtrer par prix : <input type="text">
             <button type="submit">filtrer</button>
         </label>
         <label>
-            filtrer par le nom de la destination : <input type="text" name="nomDest">
+            filtrer par le nom de la destination : <input type="text">
             <button type="submit">filtrer</button>
         </label>
         <label>
-            filtrer par la date de départ : <input type="date" name="dateDep">
+            filtrer par la date de départ : <input type="date">
             <button type="submit">filtrer</button>
         </label>
     </form>   
-    <table class="tableau" border="1">
+    <div class="table-wrapper"><table class="tableau">
         <thead>
             <tr class='entete'>
                 <th>Destination</th>
@@ -117,12 +117,13 @@
             ?>
         </tbody>
     </table>
+    </div>
     <!-- Conteneur parent pour les sections de destination -->
     <div class="container-destination">
         <!-- Paris --> 
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a><img src="Paris.jpg" alt="Paris" name="Paris" border="0" width="250" height=" 150"></a>
+                <a><img src="Paris.jpg" alt="Paris"></a>
                 <h1>Paris</h1>
             </div>
             <div class="toggle-content">
@@ -133,7 +134,7 @@
         <!-- Tokyo -->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a><img src="Tokyo.jpg" alt="Tokyo" name="Tokyo" border="0" width="250" height=" 150"></a>
+                <a><img src="Tokyo.jpg" alt="Tokyo"></a>
                 <h1>Tokyo</h1> 
             </div>
             <div class="toggle-content">
@@ -144,7 +145,7 @@
         <!-- Londres -->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a><img src="Londre.jpg" alt="Londres" name="Londres" border="0" width="250" height=" 150"></a>
+                <a><img src="Londre.jpg" alt="Londres"></a>
                 <h1>Londres</h1>
             </div>
             <div class="toggle-content">
@@ -155,7 +156,7 @@
         <!-- Sydney -->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a><img src="Sydney.jpg" alt="Sydney" name="Sydney" border="0" width="250" height=" 150"></a>
+                <a><img src="Sydney.jpg" alt="Sydney"></a>
                 <h1>Sydney</h1>
             </div>
             <div class="toggle-content">
@@ -166,10 +167,10 @@
         <!-- Rome -->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a><img src="Rome.jpg" alt="Rome" name="Rome" border="0" width="250" height=" 150"></a>
+                <a><img src="Rome.jpg" alt="Rome"></a>
                 <h1>Rome</h1>
             </div>
-            <div class="toggle-header">
+            <div class="toggle-content">
                 <p>Rome, la capitale de l'Italie, est une ville chargée d'histoire et de culture. Elle est célèbre pour ses ruines antiques, ses églises baroques et sa délicieuse cuisine italienne.</p>
             </div>
         </section>
@@ -177,7 +178,7 @@
         <!-- Barcelone -->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a><img src="https://i.ibb.co/BVmvc3nt/download.jpg" alt="Barcelone" name="Barcelone" border="0" width="250" height="150"></a>
+                <a><img src="https://i.ibb.co/BVmvc3nt/download.jpg" alt="Barcelone"></a>
                 <h1>Barcelone</h1>
             </div>
             <div class="toggle-content">
@@ -188,7 +189,7 @@
         <!-- New York -->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a><img src="https://i.ibb.co/7g0J6qY/download.jpg" alt="New York" name="New York" border="0" width="250" height="150"></a>
+                <a><img src="https://i.ibb.co/7g0J6qY/download.jpg" alt="New York"></a>
                 <h1>New York</h1>
             </div>
             <div class="toggle-content">
@@ -199,7 +200,7 @@
         <!--Berlin-->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Berlin" name="Berlin" border="0" width="250" height="150"></a>
+                <a><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Berlin"></a>
                 <h1>Berlin</h1>
             </div>
             <div class="toggle-content">
@@ -210,7 +211,7 @@
         <!-- Moscou-->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Moscou" name="Moscou" border="0" width="250" height="150"></a>
+                <a><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Moscou"></a>
                 <h1>Moscou</h1>
             </div>
             <div class="toggle-content">
@@ -221,7 +222,7 @@
         <!--Pékin-->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a ><img src="https://i.ibb.co/hRCZpMjc/download.jpg" alt="Pékin" name="Pékin" border="0" width="250" height="150"></a>
+                <a ><img src="https://i.ibb.co/hRCZpMjc/download.jpg" alt="Pékin"></a>
                 <h1>Pékin</h1>
             </div>
             <div class="toggle-content">
@@ -232,7 +233,7 @@
         <!--Rio de Janeiro-->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a ><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Rio de Janeiro" name="Rio de Janeiro" border="0" width="250" height="150"></a>
+                <a ><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Rio de Janeiro"></a>
                 <h1>Rio de Janeiro</h1>
             </div>
             <div class="toggle-content">
@@ -243,7 +244,7 @@
         <!--Le Caire-->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a ><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Le Caire" name="Le Caire" border="0" width="250" height="150"></a>
+                <a ><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Le Caire"></a>
                 <h1>Le Caire</h1>
             </div>
             <div class="toggle-content">
@@ -254,7 +255,7 @@
         <!--Bangkok-->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a ><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Bangkok" name="Bangkok" border="0" width="250" height="150"></a>
+                <a ><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Bangkok"></a>
                 <h1>Bangkok</h1>
             </div>
             <div class="toggle-content">
@@ -265,7 +266,7 @@
         <!--Istanbul-->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a ><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Istanbul" name="Istanbul" border="0" width="250" height="150"></a>
+                <a ><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Istanbul"></a>
                 <h1>Istanbul</h1>
             </div>
             <div class="toggle-content">
@@ -276,14 +277,14 @@
         <!--Los Angeles-->
         <section class="block-destination">
             <div class="toggle-header" onclick="toggleBlock(this)">
-                <a ><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Los Angeles" name="Los Angeles" border="0" width="250" height="150"></a>
+                <a ><img src="https://i.ibb.co/7JY0q2x/download.jpg" alt="Los Angeles"></a>
                 <h1>Los Angeles</h1>
             </div>
             <div class="toggle-content">
                 <p>Los Angeles, la ville des anges, est célèbre pour son industrie cinématographique, ses plages ensoleillées et sa culture diversifiée. Hollywood, Santa Monica et Venice Beach sont des destinations populaires.</p>
             </div>
-    </div>  
-    
+    </section>
+    </div>
    <script src="voyage.js"></script> 
 </body>
 </html>
